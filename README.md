@@ -35,16 +35,16 @@ The methodology begins by initializing three models, each with specific hyperpar
 - **Re-Generation Model (`model_re_generate`)**  
   Also based on the `gpt-4o-mini` architecture, this model focuses on regenerating and refining concepts. Configuration:
   - `temperature`: 1.40
-  - `top_p`: 0.88
+  - `top_p`: 0.85
   - `presence_penalty`: 0.50
   - `frequency_penalty`: 1.00
 
 - **New Concept Generation Model (`model_generate_new`)**  
   Using the `gpt-4o` architecture, this model generates creative new concepts for expanding the taxonomy. Configuration:
-  - `temperature`: 1.41
+  - `temperature`: 1.40
   - `top_p`: 0.98
-  - `presence_penalty`: 1.27
-  - `frequency_penalty`: 1.38
+  - `presence_penalty`: 1.30
+  - `frequency_penalty`: 1.40
 
 These models are initialized with the `init_models` function and a session is started using the `start_session` function. You are encouraged to experiment with different hyperparameters to optimize performance for specific tasks.
 
