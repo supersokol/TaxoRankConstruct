@@ -267,19 +267,19 @@ def init_models(log = None):
     
     # Verification model
     llm_verify              = Model('verify',       'gpt-4o-mini',  
-                                    temperature = 0.9,    top_p = 0.90,   presence_penalty = 1.00,   frequency_penalty = 0.00) 
+                                    temperature = 0.9,    top_p = 0.9,   presence_penalty = 1,   frequency_penalty = 0) 
     log.info(f"{llm_verify.info}\nmodel init successfully..")
     model_verify            = llm_verify.model
     
     # Re-Generation model
     llm_re_generate         = Model('re-generate',  'gpt-4o-mini',
-                                    temperature = 1.3,    top_p = 0.90,   presence_penalty = 0.50,   frequency_penalty = 1.00)
+                                    temperature = 1.4,    top_p = 0.85,   presence_penalty = 0.50,   frequency_penalty = 1
     log.info(f"{llm_re_generate.info}\nmodel init successfully..")
     model_re_generate       = llm_re_generate.model
     
     # New concept generation model
     llm_generate_new        = Model('generate new',  'gpt-4o',
-                                    temperature = 1.0,    top_p = 0.98,   presence_penalty = 1.00,   frequency_penalty = 1.20)
+                                    temperature = 1.4,    top_p = 0.98,   presence_penalty = 1.3,   frequency_penalty = 1.4)
     log.info(f"{llm_generate_new.info}\nmodel init successfully..")
     model_generate_new      = llm_generate_new.model
     log.info(f"model_generate_new, model_re_generate, model_verify models initialized")
