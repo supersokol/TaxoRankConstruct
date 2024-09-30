@@ -54,7 +54,7 @@ After model initialization, the taxonomy generation begins. The root concept (e.
 - `definition_amount`: Number of definitions to generate.
 - `definition_max_words`: Maximum word count for each definition.
 
-Taxonomy generation is performed via the `create_taxonomy` function, which uses the three initialized models to iteratively build the hierarchy. For broader taxonomies that include the root concept as a sub-concept, the `create_super_taxonomy` function can be utilized (currently commented out in the example).
+Taxonomy generation is performed via the `construct_taxonomy` function, which uses the three initialized models to iteratively build the hierarchy.
 
 ## Iterative Concept Expansion
 
